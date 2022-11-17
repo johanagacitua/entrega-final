@@ -1,0 +1,64 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .desyunos {
+        margin: 20px;
+
+        @include mq-1370px {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .imgdes {
+            @include mq-1370px {
+                height: $img*2;
+                width: $img*2;
+            }
+
+            height: $img*3;
+            width: $img*3;
+            @extend .m;
+
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.15);
+            }
+
+        }
+    }
+
+    .nenita {
+        margin: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+
+        img {
+            @extend .m;
+            max-width: 95%;
+
+
+        }
+
+    }
+
+    .camiontodo {
+        margin: 20px;
+
+        img {
+            height: $img*3;
+
+            @include mq-1370px {
+                height: $img*2;
+
+            }
+        }
+
+    }
+}
